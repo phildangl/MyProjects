@@ -1,0 +1,16 @@
+<body>
+<p>
+    <span id="ip"></span>
+    <br>
+    <span id="city"></span>
+</p>
+</body>
+
+<script type="application/javascript">
+    function getip(json){
+        document.getElementById("ip").innerHTML =json.ip;
+        document.getElementById("city").innerHTML=json.region_name;
+    }
+</script>
+
+<script type="application/javascript" src="http://freegeoip.net/json/?callback=getip"></script>
